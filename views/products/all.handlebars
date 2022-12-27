@@ -1,0 +1,25 @@
+<section class="container">
+    <h2>Todos os produtos</h2>
+
+
+    {{#if products}}
+    <ul>
+        {{#each products}}
+        <li>
+            <a href="/product/{{this._id}}">{{this.title}}</a>
+
+            <div class="btns-item">
+                <a href="/edit/{{this._id}}">Editar</a>
+                <form action="/delete" method="POST">
+                    <input type="hidden" name="id" value="{{this._id}}">
+                    <button class="delete-btn">Excluir</button>
+                </form>
+            </div>
+        </li>
+        {{/each}}
+        
+    </ul>
+    {{else}}
+    <span>Não há produtos cadastrados.</span>
+    {{/if}}
+</section>

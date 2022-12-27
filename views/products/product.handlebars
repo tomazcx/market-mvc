@@ -1,0 +1,23 @@
+<section class="container">
+    <div class="title-product">
+        <h2>{{product.title}}</h2>
+
+           <div class="btns-item">
+                <a href="/edit/{{product._id}}">Editar</a>
+                <form action="/delete" method="POST">
+                    <input type="hidden" name="id" value="{{product._id}}">
+                    <button class="delete-btn">Excluir</button>
+                </form>
+            </div>
+    </div>
+
+    <div class="grid-product">
+        <img src={{product.img}} alt="Imagem do produto">
+        <article>
+            <p>Preço: {{product.price}}</p>
+            <p>Categoria: {{product.category}}</p>
+            <p>Descrição: {{product.description}}</p>
+        </article>
+
+    </div>
+</section>

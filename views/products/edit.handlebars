@@ -1,0 +1,28 @@
+<section class="container">
+    <h2>Editar dados de um produto</h2>
+
+    <form action="" method="POST">
+        <div class="form-div">
+            <label for="title">Título:</label>
+            <input type="text" name="title" id="title" class="form-control" value="{{product.title}}">
+        </div>
+         <div class="form-div">
+            <label for="price">Preço:</label>
+            <input type="text" name="price" id="price" class="form-control" value="{{product.price}}">
+        </div>
+        <div class="form-div">
+            <label for="category">Categoria:</label>
+            <input type="text" name="category" id="category" class="form-control" value="{{product.category}}">
+        </div>
+        <div class="form-div">
+            <label for="img">URL da imagem:</label>
+            <input type="text" name="img" id="img" class="form-control" value="{{product.img}}">
+        </div>
+        <div class="form-div">
+            <label for="description">Descrição:</label>
+            <textarea type="text" name="description" id="description" class="form-control">{{product.description}}</textarea>
+        </div>
+        <button class="btn">Editar</button>
+    </form>
+
+</section>
